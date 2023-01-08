@@ -6,8 +6,8 @@ import { createRouter, createWebHistory } from "vue-router";
 // =============================================================================
 // MAIN
 // =============================================================================
-import Home from "@/Views/Home.vue";
-import About from "@/Views/About.vue";
+import Home from "@/views/Home.vue";
+import About from "@/views/About.vue";
 
 // =============================================================================
 // ROUTES
