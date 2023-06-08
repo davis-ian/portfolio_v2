@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="home-container">
-    <h1 style="font-size: 5rem">Vue 3 starter</h1>
+    <h1 style="font-size: 5rem">Coming Soon</h1>
     <v-btn
       style="color: white"
       @click="openTab('https://www.iandavs.com')"
