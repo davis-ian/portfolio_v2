@@ -1,10 +1,18 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div>
-    <h1>ABOUT</h1>
+    <about-me />
   </div>
 </template>
 <script>
-export default {};
+import AboutMe from "@/components/AboutMe.vue";
+export default {
+  data() {
+    return {};
+  },
+  components: {
+    AboutMe,
+  },
+};
 </script>
 <style lang=""></style>

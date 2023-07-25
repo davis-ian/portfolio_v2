@@ -5,16 +5,43 @@
  */
 
 // Components
-import App from './App.vue'
+import App from "./App.vue";
 
 // Composables
-import { createApp } from 'vue'
+import { createApp } from "vue";
+
+const app = createApp(App);
+// =============================================================================
+// FONT AWESOME CORE
+// =============================================================================
+/* import the fontawesome core */
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+// =============================================================================
+// FONT AWESOME ICONS
+// =============================================================================
+
+/* import specific icons */
+import {
+  faUserSecret,
+  faBars,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
+
+/* add icons to the library */
+library.add(faUserSecret, faBars, faXmark);
+
+// =============================================================================
+// FONT AWESOME CONFIG
+// =============================================================================
+app.component("font-awesome-icon", FontAwesomeIcon);
 
 // Plugins
-import { registerPlugins } from '@/plugins'
+import { registerPlugins } from "@/plugins";
 
-const app = createApp(App)
+registerPlugins(app);
 
-registerPlugins(app)
-
-app.mount('#app')
+app.mount("#app");
