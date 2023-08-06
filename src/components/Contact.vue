@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div>
+  <div class="pa-3">
     <h2 class="contact-title">Interested in working together?</h2>
     <p>Shoot me a line!</p>
     <v-text-field variant="outlined" label="Name" />
@@ -14,8 +14,4 @@
 <script>
 export default {};
 </script>
-<style lang="scss">
-// .contact-title {
-//   font-family: "MigraBold";
-// }
-</style>
+<style lang="scss"></style>

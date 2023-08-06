@@ -1,11 +1,13 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="hero">
-    <p>Hi, I'm Ian</p>
-    <h1 class="title">Full-Stack Developer</h1>
-    <!-- <div class="content">
-      <p>Full-Stack Developer</p>
-    </div> -->
+    <div>
+      <div class="title-wrap">
+        <h1 class="title">Ian</h1>
+        <h1 class="title">Davis</h1>
+      </div>
+      <p class="content">Full-Stack Developer</p>
+    </div>
   </div>
 </template>
 <script>
@@ -13,15 +15,48 @@ export default {};
 </script>
 <style lang="scss">
 .hero {
-  // border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  .title {
-    font-size: 6rem;
-    line-height: 6rem;
-    font-family: "ShermanDisplay", sans-serif;
+  .title-wrap {
+    display: flex;
+    gap: 35px;
   }
-  .hero-content {
-    font-size: 1.5rem;
+  .title {
+    text-transform: uppercase;
+    // font-weight: 400;
+    font-size: 8rem;
+    line-height: 7.5rem;
+  }
+  .content {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  /* CSS for mobile styles */
+  .hero {
+    .title-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .title {
+      text-transform: uppercase;
+      // font-weight: 400;
+      font-size: 5rem;
+      line-height: 4.5rem;
+    }
+    .content {
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
   }
 }
 

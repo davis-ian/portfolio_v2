@@ -1,23 +1,23 @@
 <template>
-  <div class="ma-3">
-    <h2 class="my-3">About me</h2>
+  <div class="pa-3">
+    <h1 class="my-3">About me</h1>
     <p class="my-3">
       Hey! My name is Ian and I'm a full-stack developer. I love building
       building things that live on the internet and I strive to deliver products
       where development and design come together to provide intuitive UX with
       streamlined programs.
     </p>
-    <p class="my-3">
+    <!-- <p class="my-3">
       Right now my main focus is creating software solutions with the amazing
       team at MemoryShare in Dallas, Texas and working on one of my many side
       projects. I find that working on web based projects fuels my creative
       drive and helps keep me update to date on the rapid expansion of developer
       tools, libraries, frameworks, etc.
-    </p>
+    </p> -->
 
     <p class="my-3">
-      I'm a big fan of pop punk, stand-up comedy, experimenting with tech, and
-      watching great movies.
+      I'm a big fan of pop punk, experimenting with tech, and watching great
+      movies.
     </p>
 
     <!-- TODO: Add spotify "now playing" music player -->

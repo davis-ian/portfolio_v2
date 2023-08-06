@@ -1,41 +1,67 @@
 <template>
-  <div>
-    <h2 class="ma-3">Some Things I've built..</h2>
-    <div class="projects ma-3">
-      <div v-for="(project, index) in projects" :key="index">
-        <div class="project padding: pa-3" @click="openTab(project.link)">
-          <!-- <div class="mb-2" style="font-size: 1.3rem">
-            <span>{{ index + 1 }}. </span>
-            <a :href="project.link" target="_blank"> {{ project.label }}</a>
-          </div> -->
-          <h3>{{ project.label }}</h3>
-          <v-img
-            class="elevation-2 my-3"
-            style="
-              border: none;
-              border-radius: 5px;
-              image-rendering: crisp-edges;
-            "
-            :lazy-src="project.image"
-            :src="project.image"
-          >
-          </v-img>
-          <!-- <div class="d-flex justify-center" style="gap: 10px; flex-wrap: wrap">
-            <v-chip v-for="tech in project.techStack" :key="tech">{{
-              tech.label
-            }}</v-chip>
-          </div> -->
+  <div style="position: relative" class="pa-3">
+    <h1 class="my-3">Featured Work</h1>
+    <div v-if="selectedWork">
+      {{ selectedWork.label }}
+    </div>
 
-          <!-- <v-card class="elevation-4">
-            <div class="text-center">
-            </div>
-          </v-card> -->
-        </div>
-
-        <!-- <div class="text-center mt-4">
-          <v-btn @click="openTab(project.link)"  >{{ project.label }}</v-btn>
-        </div> -->
+    <div style="border: 2px solid red; display: flex; justify-content: center">
+      <div
+        v-if="!selectedWork"
+        class="ma-5"
+        style="
+          background-color: black;
+          aspect-ratio: 16/9;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <h1 style="color: white">....</h1>
       </div>
+      <v-img max-width="700px" :src="selectedWork.image"></v-img>
+    </div>
+    <div style="display: flex; flex-direction: column">
+      <div
+        style="
+          border: 2px solid orange;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+        "
+      >
+        <div
+          @click="selectWork(item)"
+          style="z-index: 5"
+          class="project-list-item"
+          v-for="(item, index) in projects"
+          :key="index"
+        >
+          <p class="orig-label" :class="handleSelectedClass(item)">
+            {{ item.label }}
+          </p>
+          <h4 class="styled-label" :class="handleSelectedClass(item)">
+            {{ item.label }}
+          </h4>
+          <!-- <v-expand-transition>
+          <div v-show="selectedWork?.label == item.label">
+            <div v-if="selectedWork != null">
+              <v-img :src="selectedWork.image"></v-img>
+            </div>
+          </div>
+        </v-expand-transition> -->
+        </div>
+      </div>
+      <!-- <div style="margin-top: 50px">
+        <div
+          v-if="selectedWork"
+          style="border: 1px solid; border-radius: 5px; box-shadow: 5px 5px"
+        >
+          <h1>{{ selectedWork.label }}</h1>
+          <v-img max-width="400px" :src="selectedWork.image"></v-img>
+        </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -47,29 +73,30 @@ export default {
     return {
       projects: projects,
       upnext,
+      selectedWork: null,
+      showSelected: false,
+      refreshKey: 0,
     };
   },
   methods: {
     openTab(url) {
       window.open(url, "_blank");
     },
+    selectWork(item) {
+      console.log(item, "item");
+      this.selectedWork = item;
+      this.showSelected = true;
+      this.refreshKey++;
+    },
+    handleSelectedClass(item) {
+      if (this.selectedWork.label == item.label) {
+        return "";
+      }
+    },
   },
 };
 </script>
 <style lang="scss" scoped>
-.projects {
-  // border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-.project {
-  // border: 2px solid red;
-  border-radius: 5px;
-  background-color: #f0f0e8;
-  // color: black;
-}
 a.button {
   // display: block;
   // text-align: center;
@@ -98,10 +125,69 @@ a {
   display: block;
 }
 .featured-title {
-  // font-family: "MigraBold";
   font-weight: 300;
+}
 
-  // font-family: "YoungSerif";
-  // border: 2px solid red;
+.project-list-item {
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.orig-label {
+  transition-duration: 0.3s;
+  position: relative;
+  top: 0;
+  height: 100%;
+}
+.styled-label {
+  color: #3fb27f;
+  transition-duration: 0.3s;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+}
+.project-list-item:hover {
+  // font-family: "YoungSerif", serif;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+
+  .orig-label {
+    transform: translateY(-50px);
+  }
+  .styled-label {
+    transform: translateY(-50px);
+  }
+}
+
+.label-sel {
+  .orig-label {
+    transform: translateY(-50px);
+  }
+  .styled-label {
+    transform: translateY(-50px);
+  }
+}
+
+.grid-container {
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  // .grid-item-0 {
+  //   border: 5px solid lime;
+  // }
 }
 </style>
