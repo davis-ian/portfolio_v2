@@ -1,17 +1,33 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="pa-3">
-    <h2 class="contact-title">Interested in working together?</h2>
-    <p>Shoot me a line!</p>
-    <v-text-field variant="outlined" label="Name" />
-    <v-text-field variant="outlined" label="Email" />
-    <v-textarea variant="outlined" label="Message" />
-    <v-btn class="btn-shadow" variant="outlined" color="black" block
-      >Send</v-btn
-    >
+  <div>
+    <h4 class="text-lowercase">Let's Connect</h4>
+    <p class="my-3">I'm always interested in</p>
+    <div style="gap: 8px" class="d-flex flex-row flex-wrap">
+      <v-chip label variant="outlined">Full Stack Development</v-chip>
+      <v-chip label variant="outlined">UX/UI Design</v-chip>
+      <v-chip label variant="outlined">Startups</v-chip>
+      <v-chip label variant="outlined">Pizza</v-chip>
+    </div>
+
+    <div class="mt-3">
+      <v-btn @click="openEmail" size="large" variant="flat" color="black"
+        >Contact Me</v-btn
+      >
+    </div>
   </div>
 </template>
 <script>
-export default {};
+import { openEmail } from "@/utlities/utils";
+export default {
+  methods: {
+    openEmail,
+  },
+};
 </script>
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.intrest-chip {
+  border: 2px solid;
+  padding: 4px;
+}
+</style>

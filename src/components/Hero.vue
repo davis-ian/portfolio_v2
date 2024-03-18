@@ -1,66 +1,65 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="hero">
+  <div class="hero-container d-flex flex-column justify-space-between">
+    <h1 class="hero-container-title text-uppercase font-weight-black">
+      Full Stack Developer
+    </h1>
     <div>
-      <div class="title-wrap">
-        <h1 class="title">Ian</h1>
-        <h1 class="title">Davis</h1>
+      <!-- <p>I build clean modern websites that embody the essence of your brand</p> -->
+
+      <!-- <p class="hero-container-subtitle text-uppercase mt-4">
+        Creative Developer Specializing in <br />
+        <strong> Full Stack Web Development</strong>
+      </p> -->
+      <p class="hero-container-subtitle">
+        I build clean and modern websites that focus on <strong>UX</strong> and
+        <strong>performance</strong>.
+      </p>
+      <div class="mt-6">
+        <v-btn @click="openEmail" size="large" variant="flat" color="black"
+          >Book Free Consultation</v-btn
+        >
       </div>
-      <p class="content">Full-Stack Developer</p>
     </div>
   </div>
 </template>
 <script>
-export default {};
+import profileImg from "@/assets/images/profile1.png";
+import blobSvg from "@/assets/images/blob-svg1.svg";
+import { scrollToAppTop, openEmail } from "@/utlities/utils";
+export default {
+  data() {
+    return {
+      profileImg,
+      blobSvg,
+      email: import.meta.env.VITE_EMAIL,
+    };
+  },
+  methods: {
+    openEmail,
+  },
+};
 </script>
-<style lang="scss">
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+<style lang="scss" scoped>
+.hero-container {
+  // border: 2px solid orange;
+  min-height: 70vh;
 
-  .title-wrap {
-    display: flex;
-    gap: 35px;
-  }
-  .title {
-    text-transform: uppercase;
-    // font-weight: 400;
-    font-size: 8rem;
-    line-height: 7.5rem;
-  }
-  .content {
-    font-size: 1.4rem;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-}
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-  /* CSS for mobile styles */
-  .hero {
-    .title-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .title {
-      text-transform: uppercase;
-      // font-weight: 400;
-      font-size: 5rem;
-      line-height: 4.5rem;
-    }
-    .content {
-      font-size: 1.2rem;
-      font-weight: 500;
-      text-transform: uppercase;
-    }
+  h1 {
+    line-height: 0.85;
   }
-}
 
-.company-name {
-  // color: orange;
+  &-title {
+    font-size: clamp(8rem, 18vw, 20rem);
+  }
+
+  &-subtitle {
+    font-size: clamp(1rem, calc(1rem + 0.8vw), 1.5rem);
+  }
 }
 </style>

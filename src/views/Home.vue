@@ -1,80 +1,63 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div>
-    <div class="home-wrapper">
-      <div class="home-content">
-        <div class="pa-3" style="margin-bottom: 150px" id="home">
-          <hero />
-        </div>
+  <div class="d-flex flex-column">
+    <div id="home" class="pa-3" style="border-bottom: 2px solid">
+      <hero />
+    </div>
 
-        <div style="margin-bottom: 150px" id="projects">
-          <project-list />
-        </div>
+    <div id="projects" class="pa-3" style="border-bottom: 2px solid">
+      <projects />
+    </div>
 
-        <div style="margin-bottom: 150px" id="about">
-          <about-me />
-        </div>
+    <!-- <experience style="border: 1px solid" class="rounded-lg shadow-strong" /> -->
 
-        <div style="margin-bottom: 150px" id="contact">
-          <contact />
-        </div>
-      </div>
+    <div id="about" class="pa-3" style="border-bottom: 2px solid">
+      <about-me />
+    </div>
+
+    <div class="pa-3" style="border-bottom: 2px solid">
+      <contact />
+    </div>
+
+    <div class="text-center pa-3">
+      <v-btn @click="scrollToAppTop" variant="text">
+        <font-awesome-icon
+          class="mr-2"
+          icon="fa-solid fa-arrow-up"
+        ></font-awesome-icon>
+        <span> Back To Top </span>
+        <font-awesome-icon
+          class="ml-2"
+          icon="fa-solid fa-arrow-up"
+        ></font-awesome-icon>
+      </v-btn>
     </div>
   </div>
 </template>
 <script>
 import { useSnackbarStore } from "@/store/snackbar";
-import Contact from "@/components/Contact.vue";
-import ProjectList from "@/components/ProjectList.vue";
-import AboutMe from "@/components/AboutMe.vue";
 import Hero from "@/components/Hero.vue";
+import Projects from "@/components/Projects.vue";
+import Experience from "@/components/Experience.vue";
+import Contact from "@/components/Contact.vue";
+import AboutMe from "@/components/AboutMe.vue";
+import { scrollToAppTop } from "@/utlities/utils";
 
 export default {
   setup() {
     const snackbar = useSnackbarStore();
     return { snackbar };
   },
-  components: { ProjectList, Hero, AboutMe, Contact },
+  components: { Hero, Projects, Experience, Contact, AboutMe },
   methods: {
     openTab(url) {
       window.open(url, "_blank");
     },
+    scrollToAppTop,
   },
 };
 </script>
-<style lang="scss">
-.full-screen-height {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  // border: 2px solid red;
-
-  .full-width {
-    width: 100%;
-  }
-}
-
-.btn-shadow {
-  box-shadow: 5px 5px black;
-  transition: box-shadow 0.1s ease-in-out;
-}
-
-.btn-shadow:active {
-  box-shadow: none;
-}
-
-.home-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-content {
-  // border: 5px solid black;
-  width: 100%;
-  max-width: 1400px;
+<style lang="scss" scoped>
+.shadow-strong {
+  box-shadow: 10px 10px;
 }
 </style>

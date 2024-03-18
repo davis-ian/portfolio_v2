@@ -29,10 +29,22 @@ import {
   faUserSecret,
   faBars,
   faXmark,
+  faArrowUp,
+  faArrowDown,
+  faArrowLeft,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
-library.add(faUserSecret, faBars, faXmark);
+library.add(
+  faUserSecret,
+  faBars,
+  faXmark,
+  faArrowUp,
+  faArrowDown,
+  faArrowLeft,
+  faArrowRight
+);
 
 // =============================================================================
 // FONT AWESOME CONFIG
