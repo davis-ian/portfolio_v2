@@ -29,15 +29,10 @@ export const themes = [
   },
 ];
 
-import liftSrc from "@/assets/images/lift-trackr-safari.png";
-import upnextSrc from "@/assets/images/upnext-mockup-browser-3d.png";
-import shortySrc from "@/assets/images/shorty-safari.png";
-import chirpSrc from "@/assets/images/chirp-safari.png";
-
 export const projects = [
   {
     label: "upnext",
-    image: upnextSrc,
+    image: "",
     inProgress: false,
     link: "https://upnext.iandavis.dev",
     gh: "https://github.com/davis-ian?tab=repositories&q=upnext&type=&language=&sort=",
@@ -64,7 +59,7 @@ export const projects = [
   {
     label: "lift trackr",
     // image: "https://iandavs.com/lifttrackr_pic.png",
-    image: liftSrc,
+    image: "",
     inProgress: false,
     link: "https://lifttrackr.onrender.com",
     gh: "https://github.com/davis-ian/lift-trackr",
