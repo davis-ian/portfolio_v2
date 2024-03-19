@@ -66,7 +66,7 @@ export default {
       this.drawer = false;
       if (!el) return;
 
-      const offset = 80;
+      const offset = 72;
       const elPosition = el.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elPosition - offset;
 
@@ -85,12 +85,17 @@ export default {
 <style lang="scss" scoped>
 .layout-wrapper {
   // border: 3px solid lime;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   // overflow-x: hidden;
   min-height: calc(100svh - 72px);
 }
 .layout-content {
   // border: 10px solid red;
   // min-height: 100%;
+  width: 100%;
+  max-width: 1600px;
 }
 .main {
   // border: 5px solid orange;
