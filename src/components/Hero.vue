@@ -45,10 +45,10 @@ export default {
   min-height: 70vh;
 
   overflow-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+  // -webkit-hyphens: auto;
+  // -moz-hyphens: auto;
+  // -ms-hyphens: auto;
+  // hyphens: auto;
 
   h1 {
     line-height: 0.85;
