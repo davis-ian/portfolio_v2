@@ -23,13 +23,11 @@
   </div>
 </template>
 <script>
-import profileImg from "@/assets/images/profile1.png";
 import blobSvg from "@/assets/images/blob-svg1.svg";
 import { scrollToAppTop, openEmail } from "@/utlities/utils";
 export default {
   data() {
     return {
-      profileImg,
       blobSvg,
       email: import.meta.env.VITE_EMAIL,
     };
