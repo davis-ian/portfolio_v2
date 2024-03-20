@@ -64,16 +64,13 @@
 </template>
 <script>
 import { projects } from "@/constants";
-import placeholderImg from "@/assets/images/404Robot.svg";
-import upnextDetailsMobile from "@/assets/images/upnext-details-mobile.svg";
+
 import { useSnackbarStore } from "@/store/snackbar";
 import { openEmail } from "@/utlities/utils.js";
 export default {
   data() {
     return {
       projects,
-      placeholderImg,
-      upnextDetailsMobile,
       snackbar: useSnackbarStore(),
       email: import.meta.env.VITE_EMAIL,
     };
