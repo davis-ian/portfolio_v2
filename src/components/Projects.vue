@@ -28,6 +28,7 @@
               <v-img
                 v-if="project.image"
                 style="max-width: 100%"
+                aspect-ratio="1"
                 :src="project.image"
                 :lazy-src="project.image"
               ></v-img>
