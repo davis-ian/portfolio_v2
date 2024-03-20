@@ -29,10 +29,14 @@ export const themes = [
   },
 ];
 
+import upnextMockup from "@/assets/images/upnext-mockup.png";
+import minigamesMockup from "@/assets/images/minigames-mockup.png";
+import liftMockup from "@/assets/images/lift-mockup.png";
+
 export const projects = [
   {
     label: "upnext",
-    image: "",
+    image: upnextMockup,
     inProgress: false,
     link: "https://upnext.iandavis.dev",
     gh: "https://github.com/davis-ian?tab=repositories&q=upnext&type=&language=&sort=",
@@ -46,7 +50,7 @@ export const projects = [
   {
     label: "minigames",
     // image: "https://iandavs.com/lifttrackr_pic.png",
-    image: "",
+    image: minigamesMockup,
     inProgress: true,
     link: "https://minigames.iandavis.dev",
     gh: "https://github.com/davis-ian/minigame",
@@ -59,7 +63,7 @@ export const projects = [
   {
     label: "lift trackr",
     // image: "https://iandavs.com/lifttrackr_pic.png",
-    image: "",
+    image: liftMockup,
     inProgress: false,
     link: "https://lifttrackr.onrender.com",
     gh: "https://github.com/davis-ian/lift-trackr",

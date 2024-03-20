@@ -16,21 +16,28 @@
       <v-row>
         <v-col cols="12" v-for="project in projects">
           <div class="mt-4">
-            <div style="background-color: #000000">
+            <div
+              style="max-width: 500px; box-shadow: 3px 3px 0; border: 2px solid"
+              class="pa-5"
+            >
               <!-- <v-img
                 style="border: 1px solid; max-width: 100%"
                 :src="placeholderImg"
                 :lazy-src="placeholderImg"
               ></v-img> -->
-              <!-- <v-img
-                style="border: 1px solid; max-width: 100%"
+              <v-img
+                v-if="project.image"
+                style="max-width: 100%"
                 :src="project.image"
                 :lazy-src="project.image"
-              ></v-img> -->
+              ></v-img>
             </div>
 
-            <h5 class="mt-2">{{ project.label }}</h5>
-            <i v-if="project.inProgress">In Work</i>
+            <div class="d-flex align-end">
+              <h5 class="mt-2 mr-2">{{ project.label }}</h5>
+              <i v-if="project.inProgress">In Work</i>
+            </div>
+
             <p class="mt-1">
               {{ project.desc }}
             </p>
@@ -99,8 +106,12 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .projects-section {
   // min-height: 60svh;
+}
+
+.image-black-and-white {
+  filter: grayscale(70%);
 }
 </style>
