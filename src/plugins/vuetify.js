@@ -28,7 +28,7 @@ export default createVuetify({
           // secondary: '#5CBBF6',
           background: "#FFFFFF",
           // primary: "#fb6f3e",
-          primary: "#181818",
+          primary: "#ff5c35",
           font: "#181818",
           // secondary: '#424242',
           // accent: '#82B1FF',
@@ -42,7 +42,7 @@ export default createVuetify({
         colors: {
           background: "#181818",
           font: "#FFFFFF",
-          primary: "#FFFFFF",
+          primary: "#ff5c35",
           error: "#FF5252",
           info: "#2196F3",
           success: "#4CAF50",
