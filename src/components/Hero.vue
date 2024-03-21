@@ -43,7 +43,7 @@ export default {
   overflow-wrap: break-word;
 
   h1 {
-    line-height: 0.8;
+    line-height: 0.75;
   }
 
   &-title {
