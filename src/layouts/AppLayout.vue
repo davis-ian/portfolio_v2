@@ -11,8 +11,7 @@
 
     <v-navigation-drawer
       class="bg-background"
-      location="bottom"
-      style="height: 100%"
+      style="height: 100%; width: 100%"
       v-model="drawer"
       temporary
     >

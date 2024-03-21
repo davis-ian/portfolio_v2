@@ -52,9 +52,13 @@ h5,
 h6 {
   // font-family: "YoungSerif", serif;
   // font-family: "Inter", sans-serif;
-  font-family: "GT America Condensed", sans-serif;
-  // font-weight: 700 !important;
+  // font-family: "GT America Condensed", sans-serif;
+  // font-family: "DM Sans", sans-serif;
+  font-weight: 700 !important;
   // font-family: "FiraSans", sans-serif;
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 /* Global styles for headings to match Vuetify's Material Design typography */
 h1 {
@@ -105,8 +109,8 @@ html {
 body,
 .v-application {
   // font-family: "DM Sans", sans-serif;
-  // font-family: "GtAmerica", sans-serif;
-  font-family: "GT America", sans-serif;
+  font-family: "Sofia Sans", sans-serif;
+  // font-family: "GT America", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 
