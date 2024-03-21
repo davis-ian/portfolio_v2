@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div>
-    <h4 class="text-lowercase">Let's Connect</h4>
+    <h3 class="text-lowercase">Let's Connect</h3>
     <p class="my-3">I'm always interested in</p>
     <div style="gap: 8px" class="d-flex flex-row flex-wrap">
       <v-chip label variant="outlined">Full Stack Development</v-chip>

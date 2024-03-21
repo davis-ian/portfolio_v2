@@ -1,6 +1,6 @@
 <template>
   <div class="projects-section d-flex flex-column">
-    <h4 class="mb-3 text-lowercase">Selected Works</h4>
+    <h3 class="mb-3 text-lowercase">Selected Works</h3>
     <div class="flex-grow-1 d-flex flex-column justify-center">
       <!-- <div class="fill-height"> -->
       <!-- <div v-for="project in projects">
@@ -35,8 +35,8 @@
             </div>
 
             <div class="d-flex align-end">
-              <h5 class="mt-2 mr-2">{{ project.label }}</h5>
-              <i v-if="project.inProgress">In Work</i>
+              <h4 class="mt-2 mr-2">{{ project.label }}</h4>
+              <i class="mb-1 text-italic" v-if="project.inProgress">In Work</i>
             </div>
 
             <p class="mt-1">

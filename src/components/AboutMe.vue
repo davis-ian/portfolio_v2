@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 class="text-lowercase">About</h4>
+    <h3 class="text-lowercase">About</h3>
     <p class="my-3">
       I'm a full-stack developer. I build clean and modern websites with a focus
       on UX and performance. I'm currently working with the incredible team @
