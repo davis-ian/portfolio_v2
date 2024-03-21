@@ -5,8 +5,6 @@
         Ian Davis
       </h5>
 
-      <span>{{ lightTheme }}</span>
-
       <div class="d-flex" style="gap: 12px">
         <v-switch
           v-model="lightTheme"
