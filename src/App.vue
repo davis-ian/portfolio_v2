@@ -111,6 +111,9 @@ body,
   font-style: normal;
 
   background-color: var(--v-background-base);
+
+  -webkit-font-smoothing: antialiased; /* For Chrome and Safari */
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
