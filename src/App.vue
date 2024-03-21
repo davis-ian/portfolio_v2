@@ -35,6 +35,9 @@ export default {
     };
   },
   methods: {},
+  mounted() {
+    console.log(this.$vuetify.theme.current.colors.background, "bg");
+  },
   components: { Snackbar, AppLayout },
 };
 </script>
@@ -106,6 +109,8 @@ body,
   font-family: "GT America", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+
+  background-color: var(--v-background-base);
 }
 
 p {
