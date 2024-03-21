@@ -17,7 +17,7 @@
         <v-col cols="12" v-for="project in projects">
           <div class="mt-4">
             <div
-              style="max-width: 500px; box-shadow: 3px 3px 0; border: 2px solid"
+              style="max-width: 500px; box-shadow: 5px 5px 0; border: 2px solid"
               class="pa-5"
             >
               <!-- <v-img

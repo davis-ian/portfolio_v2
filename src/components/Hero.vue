@@ -39,21 +39,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 .hero-container {
-  // border: 2px solid orange;
   min-height: 70vh;
-
   overflow-wrap: break-word;
-  // -webkit-hyphens: auto;
-  // -moz-hyphens: auto;
-  // -ms-hyphens: auto;
-  // hyphens: auto;
 
   h1 {
-    line-height: 0.85;
+    line-height: 0.8;
   }
 
   &-title {
-    font-size: clamp(8rem, 18vw, 20rem);
+    font-size: clamp(10rem, 20vw, 20rem);
   }
 
   &-subtitle {
