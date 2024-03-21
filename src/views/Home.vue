@@ -5,7 +5,7 @@
     </div>
 
     <Vue3Marquee pause-on-hover clone duration="3">
-      <div class="d-flex align-center">
+      <div style="border-bottom: 2px solid" class="d-flex align-center">
         <h1 class="mx-8 text-uppercase">Scroll</h1>
         <font-awesome-icon
           style="font-size: 4rem"
