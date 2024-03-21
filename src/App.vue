@@ -99,6 +99,9 @@ h6 {
   letter-spacing: 0.0075em;
 }
 
+html {
+  background-color: var(--v-background-base);
+}
 body,
 .v-application {
   // font-family: "DM Sans", sans-serif;
