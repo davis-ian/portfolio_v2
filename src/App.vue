@@ -35,9 +35,6 @@ export default {
     };
   },
   methods: {},
-  mounted() {
-    console.log(this.$vuetify.theme.current.colors.background, "bg");
-  },
   components: { Snackbar, AppLayout },
 };
 </script>

@@ -67,6 +67,9 @@ export default {
       this.$router.push({ path: "/#" + item.route });
     },
   },
+  mounted() {
+    this.lightTheme = !this.$vuetify.theme.current.dark;
+  },
 };
 </script>
 <style lang="scss" scoped>

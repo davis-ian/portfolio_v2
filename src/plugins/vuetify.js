@@ -11,10 +11,15 @@ import "vuetify/styles";
 // Composables
 import { createVuetify } from "vuetify";
 
+// Detect user's preferred scheme
+const userPrefersDark =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   theme: {
-    defaultTheme: "light",
+    defaultTheme: userPrefersDark ? "dark" : "light",
     themes: {
       light: {
         colors: {
