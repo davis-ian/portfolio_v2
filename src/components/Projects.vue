@@ -46,7 +46,7 @@
             <div class="d-flex mt-2" style="gap: 12px">
               <v-btn
                 @click="openTab(project.link)"
-                :color="$vuetify.theme.global.current.dark ? 'white' : 'black'"
+                color="primary"
                 variant="flat"
                 >Website</v-btn
               >

@@ -15,11 +15,7 @@
         <strong>performance</strong>.
       </p>
       <div class="mt-6">
-        <v-btn
-          @click="openEmail"
-          size="large"
-          :color="$vuetify.theme.global.current.dark ? 'white' : 'black'"
-          variant="flat"
+        <v-btn @click="openEmail" size="large" color="primary" variant="flat"
           >Book Free Consultation</v-btn
         >
       </div>
