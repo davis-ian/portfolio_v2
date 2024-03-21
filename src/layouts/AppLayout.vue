@@ -4,7 +4,6 @@
       @toggle-drawer="drawer = !drawer"
       @nav-click="(val) => handleMenuNav(val)"
       @cta-click="openEmail"
-      @set-light-theme="(val) => setLightTheme(val)"
       class="nav glass-blur bg-background"
       :nav-items="navItems"
     ></nav-bar>
@@ -13,6 +12,7 @@
       class="bg-background"
       style="height: 100%; width: 100%"
       v-model="drawer"
+      touchless
       temporary
     >
       <div class="d-flex justify-end pa-3">
@@ -44,12 +44,11 @@
 <script>
 import NavBar from "@/layouts/NavBar.vue";
 import { openEmail } from "@/utlities/utils";
-import { useTheme } from "vuetify";
+
 export default {
   data() {
     return {
       drawer: false,
-      theme: useTheme(),
       navItems: [
         { label: "Home", route: "home" },
         { label: "Work", route: "projects" },
@@ -76,14 +75,6 @@ export default {
         top: offsetPosition,
         behavior: "smooth",
       });
-    },
-    toggleTheme() {
-      this.theme.global.name = this.theme.global.current.dark
-        ? "light"
-        : "dark";
-    },
-    setLightTheme(val) {
-      this.theme.global.name = val == true ? "light" : "dark";
     },
   },
   components: {

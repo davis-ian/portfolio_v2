@@ -5,6 +5,8 @@
         Ian Davis
       </h5>
 
+      <span>{{ lightTheme }}</span>
+
       <div class="d-flex" style="gap: 12px">
         <v-switch
           v-model="lightTheme"
@@ -40,10 +42,16 @@
   </div>
 </template>
 <script>
+import {
+  getLocalLightModeSettings,
+  setLocalLightModeSettings,
+} from "@/utlities/utils";
+import { useTheme } from "vuetify";
 export default {
   data() {
     return {
       lightTheme: true,
+      theme: useTheme(),
     };
   },
   props: {
@@ -54,21 +62,28 @@ export default {
   },
   watch: {
     lightTheme(newVal) {
-      console.log(newVal, "dark theme");
-      this.$emit("set-light-theme", newVal);
+      this.setLightTheme(newVal);
     },
   },
   methods: {
+    getLocalLightModeSettings,
+    setLocalLightModeSettings,
     ctaClick() {
       this.$emit("cta-click");
     },
     navToSection(item) {
-      console.log(item.route, "ropute");
       this.$router.push({ path: "/#" + item.route });
     },
+    setLightTheme(val) {
+      this.setLocalLightModeSettings(val);
+      this.theme.global.name = val == true ? "light" : "dark";
+      this.lightTheme = val;
+    },
   },
+  created() {},
   mounted() {
-    this.lightTheme = !this.$vuetify.theme.current.dark;
+    const localLightMode = this.getLocalLightModeSettings();
+    this.setLightTheme(localLightMode);
   },
 };
 </script>
