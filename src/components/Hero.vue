@@ -47,7 +47,7 @@ export default {
   }
 
   &-title {
-    font-size: clamp(10rem, 20vw, 20rem);
+    font-size: clamp(9rem, 20vw, 20rem);
   }
 
   &-subtitle {
