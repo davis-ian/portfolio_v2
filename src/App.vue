@@ -20,21 +20,33 @@ import AppLayout from "@/layouts/AppLayout.vue";
 
 import Snackbar from "@/components/ui/Snackbar.vue";
 import { useSnackbarStore } from "./store/snackbar";
+import { useTheme } from "vuetify";
+import { onMounted } from "vue";
 
 export default {
-  setup() {
-    const snackbarStore = useSnackbarStore();
-    return { snackbarStore };
-  },
   data() {
     return {
       menuItems: [
         { label: "Home", link: "#home" },
         { label: "About", link: "#about" },
       ],
+      theme: useTheme(),
+      snackbar: useSnackbarStore(),
     };
   },
-  methods: {},
+  mounted() {
+    this.updateThemeColor();
+  },
+  methods: {
+    updateThemeColor() {
+      const bgColor = this.$vuetify.theme.current.colors.background;
+      const metaThemeColor = document.querySelector("meta[name=theme-color]");
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute("content", bgColor);
+        console.log(metaThemeColor, "meta found");
+      }
+    },
+  },
   components: { Snackbar, AppLayout },
 };
 </script>
