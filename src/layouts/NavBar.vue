@@ -76,6 +76,15 @@ export default {
       this.setLocalLightModeSettings(val);
       this.theme.global.name = val == true ? "light" : "dark";
       this.lightTheme = val;
+
+      this.updateThemeColor();
+    },
+    updateThemeColor() {
+      const bgColor = this.$vuetify.theme.current.colors.background;
+      const metaThemeColor = document.querySelector("meta[name=theme-color]");
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute("content", bgColor);
+      }
     },
   },
   created() {},
