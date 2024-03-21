@@ -44,8 +44,11 @@
             </p>
 
             <div class="d-flex mt-2" style="gap: 12px">
-              <v-btn @click="openTab(project.link)" color="black" variant="flat"
-                >Demo</v-btn
+              <v-btn
+                @click="openTab(project.link)"
+                :color="$vuetify.theme.global.current.dark ? 'white' : 'black'"
+                variant="flat"
+                >Website</v-btn
               >
               <v-btn @click="openTab(project.gh)" variant="outlined"
                 >GitHub</v-btn

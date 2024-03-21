@@ -11,7 +11,11 @@
     </div>
 
     <div class="mt-3">
-      <v-btn @click="openEmail" size="large" variant="flat" color="black"
+      <v-btn
+        @click="openEmail"
+        size="large"
+        variant="flat"
+        :color="$vuetify.theme.global.current.dark ? 'white' : 'black'"
         >Contact Me</v-btn
       >
     </div>

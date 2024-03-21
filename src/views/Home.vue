@@ -54,6 +54,7 @@ export default {
     },
     scrollToAppTop,
   },
+  mounted() {},
 };
 </script>
 <style lang="scss" scoped>

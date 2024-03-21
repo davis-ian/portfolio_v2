@@ -4,11 +4,13 @@
       @toggle-drawer="drawer = !drawer"
       @nav-click="(val) => handleMenuNav(val)"
       @cta-click="openEmail"
-      class="nav glass-blur"
+      @set-light-theme="(val) => setLightTheme(val)"
+      class="nav glass-blur bg-background"
       :nav-items="navItems"
     ></nav-bar>
 
     <v-navigation-drawer
+      class="bg-background"
       location="bottom"
       style="height: 100%"
       v-model="drawer"
@@ -20,7 +22,7 @@
         </v-btn>
       </div>
       <div style="min-height: calc(100% - 72px)" class="d-flex align-center">
-        <v-list>
+        <v-list style="width: 100%">
           <v-list-item v-for="item in navItems">
             <h2 @click="handleMenuNav(item)" class="text-uppercase">
               {{ item.label }}
@@ -43,11 +45,12 @@
 <script>
 import NavBar from "@/layouts/NavBar.vue";
 import { openEmail } from "@/utlities/utils";
-
+import { useTheme } from "vuetify";
 export default {
   data() {
     return {
       drawer: false,
+      theme: useTheme(),
       navItems: [
         { label: "Home", route: "home" },
         { label: "Work", route: "projects" },
@@ -75,6 +78,14 @@ export default {
         behavior: "smooth",
       });
     },
+    toggleTheme() {
+      this.theme.global.name = this.theme.global.current.dark
+        ? "light"
+        : "dark";
+    },
+    setLightTheme(val) {
+      this.theme.global.name = val == true ? "light" : "dark";
+    },
   },
   components: {
     NavBar,
@@ -82,7 +93,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .layout-wrapper {
   // border: 3px solid lime;
   display: flex;
@@ -108,7 +119,7 @@ export default {
   height: 72px;
   z-index: 100;
   border-bottom: 2px solid;
-  background-color: white;
+  //background-color: white;
 }
 
 .glass-blur {
