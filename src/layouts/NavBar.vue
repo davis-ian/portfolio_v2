@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="d-flex justify-space-between align-center pa-3">
+    <nav class="d-flex justify-space-between align-center pa-3 px-5">
       <h5 class="pointer text-uppercase" @click="$router.push('/')">
         Ian Davis
       </h5>
