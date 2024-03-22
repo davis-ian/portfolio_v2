@@ -17,7 +17,7 @@ import PageNotFound from "@/views/PageNotFound.vue";
 const routes = [
   { path: "/", name: "Home", component: Home },
   // { path: "/about", name: "About", component: About },
-  { path: "/details/:name", name: "ProjectDetails", component: ProjectDetails },
+  // { path: "/details/:name", name: "ProjectDetails", component: ProjectDetails },
   { path: "/:pathMatch(.*)*", name: "PageNotFound", component: PageNotFound },
 ];
 
