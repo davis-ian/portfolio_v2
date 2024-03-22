@@ -1,11 +1,11 @@
 <template>
   <div class="d-flex flex-column">
-    <div id="home" class="pa-3" style="border-bottom: 2px solid">
+    <div id="home" class="pa-5">
       <hero />
     </div>
 
-    <Vue3Marquee pause-on-hover clone duration="3">
-      <div style="border-bottom: 2px solid" class="d-flex align-center">
+    <Vue3Marquee class="strong-border" pause-on-hover clone duration="3">
+      <div class="d-flex align-center">
         <h4 class="mx-8 text-uppercase">Scroll</h4>
         <font-awesome-icon
           style="font-size: 1.5rem"
@@ -13,19 +13,25 @@
         ></font-awesome-icon>
       </div>
     </Vue3Marquee>
-    <div id="projects" class="pa-3" style="border-bottom: 2px solid">
+
+    <div id="projects" class="pa-5">
       <projects />
     </div>
 
+    <div class="strong-divider"></div>
     <!-- <experience style="border: 1px solid" class="rounded-lg shadow-strong" /> -->
 
-    <div id="about" class="pa-3" style="border-bottom: 2px solid">
+    <div id="about" class="pa-5">
       <about-me />
     </div>
 
-    <div class="pa-3" style="border-bottom: 2px solid">
+    <div class="strong-divider"></div>
+
+    <div class="pa-5">
       <contact />
     </div>
+
+    <div class="strong-divider"></div>
 
     <div @click="scrollToAppTop" v-ripple class="text-center pa-6 pointer">
       <font-awesome-icon
@@ -68,5 +74,9 @@ export default {
 <style lang="scss" scoped>
 .shadow-strong {
   box-shadow: 10px 10px;
+}
+
+.strong-divider {
+  border-bottom: 2px solid;
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
   <div class="projects-section d-flex flex-column">
-    <h3 class="mb-3 text-lowercase">Selected Works</h3>
+    <h3 class="text-lowercase">Selected Works</h3>
     <div class="flex-grow-1 d-flex flex-column justify-center">
       <v-row>
         <v-col cols="12" v-for="project in projects">
-          <div class="mt-4">
-            <div class="project-image-wrapper pa-5">
+          <div class="mt-6">
+            <div class="project-image-wrapper pa-5 rounded">
               <v-img
                 @click="openTab(project.link)"
                 v-if="project.image"
@@ -16,8 +16,8 @@
               ></v-img>
             </div>
 
-            <div class="d-flex align-end">
-              <h4 class="mt-2 mr-2">{{ project.label }}</h4>
+            <div class="mt-4 d-flex align-end">
+              <h4 class="mr-2">{{ project.label }}</h4>
               <i class="mb-1 text-italic" v-if="project.inProgress">In Work</i>
             </div>
 

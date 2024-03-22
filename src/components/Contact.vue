@@ -7,10 +7,11 @@
       <v-chip label variant="outlined">Full Stack Development</v-chip>
       <v-chip label variant="outlined">UX/UI Design</v-chip>
       <v-chip label variant="outlined">Startups</v-chip>
+      <v-chip label variant="outlined">SaaS</v-chip>
       <v-chip label variant="outlined">Pizza</v-chip>
     </div>
 
-    <div class="mt-3">
+    <div class="mt-8">
       <v-btn
         @click="openEmail"
         size="large"

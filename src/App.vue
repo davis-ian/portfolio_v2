@@ -158,6 +158,10 @@ p {
   transform: translateY(3px); /* Slightly move the button down */
 }
 
+.strong-border {
+  border: 2px solid;
+}
+
 .pointer {
   cursor: pointer !important;
 }

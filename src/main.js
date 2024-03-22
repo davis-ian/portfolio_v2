@@ -35,8 +35,17 @@ import {
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 
+import {
+  faGithub,
+  faVuejs,
+  faPython,
+} from "@fortawesome/free-brands-svg-icons";
+
 /* add icons to the library */
 library.add(
+  faPython,
+  faVuejs,
+  faGithub,
   faUserSecret,
   faBars,
   faXmark,

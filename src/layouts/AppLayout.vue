@@ -4,7 +4,7 @@
       @toggle-drawer="drawer = !drawer"
       @nav-click="(val) => handleMenuNav(val)"
       @cta-click="openEmail"
-      class="nav glass-blur bg-background"
+      class="nav bg-background"
       :nav-items="navItems"
     ></nav-bar>
 
@@ -23,9 +23,9 @@
       <div style="min-height: calc(100% - 72px)" class="d-flex align-center">
         <v-list style="width: 100%">
           <v-list-item v-for="item in navItems">
-            <h2 @click="handleMenuNav(item)" class="text-uppercase">
+            <h1 @click="handleMenuNav(item)" class="text-uppercase">
               {{ item.label }}
-            </h2>
+            </h1>
           </v-list-item>
         </v-list>
       </div>
@@ -84,7 +84,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .layout-wrapper {
   // border: 3px solid lime;
   display: flex;
@@ -94,13 +94,8 @@ export default {
   min-height: calc(100svh - 72px);
 }
 .layout-content {
-  // border: 10px solid red;
-  // min-height: 100%;
   width: 100%;
   max-width: 1600px;
-}
-.main {
-  // border: 5px solid orange;
 }
 
 .nav {
@@ -116,10 +111,5 @@ export default {
 .glass-blur {
   // backdrop-filter: blur(10px);
   // background-color: rgba(0, 0, 0, 0.4);
-}
-
-.nav-drawer {
-  // height: calc(100% - 72px);
-  color: red !important;
 }
 </style>
