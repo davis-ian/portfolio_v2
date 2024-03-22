@@ -2,30 +2,12 @@
   <div class="projects-section d-flex flex-column">
     <h3 class="mb-3 text-lowercase">Selected Works</h3>
     <div class="flex-grow-1 d-flex flex-column justify-center">
-      <!-- <div class="fill-height"> -->
-      <!-- <div v-for="project in projects">
-          <h3
-            @click="$router.push({ path: `/details/${project.label}` })"
-            class="text-uppercase"
-          >
-            {{ project.label }}
-          </h3>
-        </div> -->
-      <!-- </div> -->
-
       <v-row>
         <v-col cols="12" v-for="project in projects">
           <div class="mt-4">
-            <div
-              style="max-width: 500px; box-shadow: 5px 5px 0; border: 2px solid"
-              class="pa-5"
-            >
-              <!-- <v-img
-                style="border: 1px solid; max-width: 100%"
-                :src="placeholderImg"
-                :lazy-src="placeholderImg"
-              ></v-img> -->
+            <div class="project-image-wrapper pa-5">
               <v-img
+                @click="openTab(project.link)"
                 v-if="project.image"
                 style="max-width: 100%"
                 aspect-ratio="1"
@@ -48,9 +30,13 @@
                 @click="openTab(project.link)"
                 color="primary"
                 variant="flat"
+                style="box-shadow: 2px 2px"
                 >Website</v-btn
               >
-              <v-btn @click="openTab(project.gh)" variant="outlined"
+              <v-btn
+                style="box-shadow: 2px 2px"
+                @click="openTab(project.gh)"
+                variant="outlined"
                 >GitHub</v-btn
               >
             </div>
@@ -114,5 +100,12 @@ export default {
 
 .image-black-and-white {
   filter: grayscale(70%);
+}
+
+.project-image-wrapper {
+  max-width: 500px;
+  box-shadow: 5px 5px 0;
+  border: 2px solid;
+  cursor: pointer;
 }
 </style>

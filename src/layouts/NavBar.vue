@@ -30,7 +30,11 @@
             >{{ item.label }}</v-btn
           >
 
-          <v-btn color="primary" variant="flat" @click="ctaClick"
+          <v-btn
+            color="primary"
+            variant="flat"
+            class="strong-shadow"
+            @click="ctaClick"
             >Let's Talk</v-btn
           >
         </div>

@@ -52,6 +52,9 @@ export default {
 </script>
 
 <style lang="scss">
+.strong-shadow {
+  box-shadow: 5px 5px;
+}
 #app {
   // background-color: black;
   // color: white;

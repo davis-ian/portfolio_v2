@@ -11,7 +11,12 @@
     </div>
 
     <div class="mt-3">
-      <v-btn @click="openEmail" size="large" variant="flat" color="primary"
+      <v-btn
+        @click="openEmail"
+        size="large"
+        variant="flat"
+        color="primary"
+        class="strong-shadow"
         >Contact Me</v-btn
       >
     </div>

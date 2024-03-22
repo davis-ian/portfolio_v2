@@ -18,7 +18,12 @@
         <strong>performance</strong>.
       </p>
       <div class="mt-3">
-        <v-btn @click="openEmail" size="large" color="primary" variant="flat"
+        <v-btn
+          @click="openEmail"
+          size="large"
+          color="primary"
+          variant="flat"
+          class="strong-shadow"
           >Book Free Consultation</v-btn
         >
       </div>
