@@ -37,7 +37,7 @@
               <v-btn
                 class="strong-border"
                 color="white"
-                style="box-shadow: 2px 2px"
+                style="box-shadow: 2px 2px rgb(var(--v-theme-font))"
                 @click="openTab(project.gh)"
                 >GitHub</v-btn
               >

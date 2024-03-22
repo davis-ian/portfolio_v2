@@ -52,13 +52,6 @@ export default {
 </script>
 
 <style lang="scss">
-.strong-shadow {
-  box-shadow: 5px 5px;
-}
-
-.strong-border {
-  border: 2px solid;
-}
 #app {
   // background-color: black;
   // color: white;
@@ -151,6 +144,14 @@ h5,
 h6,
 p {
   color: rgb(var(--v-theme-font));
+}
+
+.strong-shadow {
+  box-shadow: 5px 5px rgb(var(--v-theme-font));
+}
+
+.strong-border {
+  border: 2px solid rgb(var(--v-theme-font));
 }
 .pointer {
   cursor: pointer;
