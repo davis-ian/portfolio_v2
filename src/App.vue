@@ -146,15 +146,20 @@ p {
   color: rgb(var(--v-theme-font));
 }
 
-.strong-shadow {
-  box-shadow: 5px 5px rgb(var(--v-theme-font));
+.button-shadow {
+  border: 2px solid #181818;
+  box-shadow: 3px 3px rgb(var(--v-theme-font));
+  transition: 0.3s;
 }
 
-.strong-border {
-  border: 2px solid rgb(var(--v-theme-font));
+.button-shadow:hover {
+  // box-shadow: none;
+  box-shadow: none;
+  transform: translateY(3px); /* Slightly move the button down */
 }
+
 .pointer {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .outline-text {

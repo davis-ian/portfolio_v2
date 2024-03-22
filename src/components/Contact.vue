@@ -16,7 +16,7 @@
         size="large"
         variant="flat"
         color="primary"
-        class="strong-shadow strong-border"
+        class="button-shadow"
         >Contact Me</v-btn
       >
     </div>

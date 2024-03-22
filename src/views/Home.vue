@@ -27,7 +27,7 @@
       <contact />
     </div>
 
-    <div @click="scrollToAppTop" v-ripple class="text-center pa-6">
+    <div @click="scrollToAppTop" v-ripple class="text-center pa-6 pointer">
       <font-awesome-icon
         class="mr-2"
         icon="fa-solid fa-arrow-up"

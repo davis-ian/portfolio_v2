@@ -30,14 +30,12 @@
                 @click="openTab(project.link)"
                 color="primary"
                 variant="flat"
-                class="strong-border"
-                style="box-shadow: 2px 2px"
+                class="button-shadow"
                 >Website</v-btn
               >
               <v-btn
-                class="strong-border"
+                class="button-shadow"
                 color="white"
-                style="box-shadow: 2px 2px rgb(var(--v-theme-font))"
                 @click="openTab(project.gh)"
                 >GitHub</v-btn
               >
