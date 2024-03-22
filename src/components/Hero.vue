@@ -17,7 +17,7 @@
         I build clean and modern websites that focus on <strong>UX</strong> and
         <strong>performance</strong>.
       </p>
-      <div class="mt-1">
+      <div class="mt-3">
         <v-btn @click="openEmail" size="large" color="primary" variant="flat"
           >Book Free Consultation</v-btn
         >
