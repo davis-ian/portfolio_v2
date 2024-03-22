@@ -4,7 +4,7 @@
       <hero />
     </div>
 
-    <Vue3Marquee class="strong-border" pause-on-hover clone duration="3">
+    <Vue3Marquee class="strong-border" pause-on-hover clone :duration="3">
       <div class="d-flex align-center">
         <h4 class="mx-8 text-uppercase">Scroll</h4>
         <font-awesome-icon
@@ -55,9 +55,15 @@ import Contact from "@/components/Contact.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import { scrollToAppTop } from "@/utlities/utils";
 import { Vue3Marquee } from "vue3-marquee";
+import { useMeta } from "vue-meta";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   setup() {
+    useMeta({
+      title: "Test Title",
+    });
+
     const snackbar = useSnackbarStore();
     return { snackbar };
   },
@@ -69,7 +75,7 @@ export default {
     scrollToAppTop,
   },
   mounted() {},
-};
+});
 </script>
 <style lang="scss" scoped>
 .shadow-strong {
