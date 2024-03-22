@@ -24,11 +24,11 @@ export default createVuetify({
       light: {
         colors: {
           font: "##fb6f3e",
-          // primary: '#1867C0',
+          // primary: "#1867C0",
           // secondary: '#5CBBF6',
           background: "#FFFFFF",
-          // primary: "#fb6f3e",
-          primary: "#ff5c35",
+          primary: "#FFC107",
+          // primary: "#ff5c35",
           font: "#181818",
           // secondary: '#424242',
           // accent: '#82B1FF',

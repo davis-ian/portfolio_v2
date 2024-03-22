@@ -60,8 +60,8 @@
     </div>
     <div class="mt-12">
       <p>Like what you see? Let's talk:</p>
-      <a @click="openEmail" class="text-decoration-underline text-primary"
-        ><h5 class="text-primary">{{ email }}</h5></a
+      <a @click="openEmail" class="text-decoration-underline"
+        ><h5>{{ email }}</h5></a
       >
     </div>
   </div>
