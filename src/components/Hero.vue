@@ -1,6 +1,9 @@
 <template>
   <div class="hero-container d-flex flex-column justify-space-between">
-    <h1 class="hero-container-title text-uppercase font-weight-black">
+    <h1
+      style="margin-left: -7px"
+      class="hero-container-title text-uppercase font-weight-black"
+    >
       Full Stack Developer
     </h1>
     <div>
