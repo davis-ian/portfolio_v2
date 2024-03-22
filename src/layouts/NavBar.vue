@@ -91,10 +91,14 @@ export default {
       }
     },
   },
-  created() {},
   mounted() {
     const localLightMode = this.getLocalLightModeSettings();
-    this.setLightTheme(localLightMode);
+
+    if (localLightMode == null) {
+      this.setLightTheme(true);
+    } else {
+      this.setLightTheme(localLightMode);
+    }
   },
 };
 </script>

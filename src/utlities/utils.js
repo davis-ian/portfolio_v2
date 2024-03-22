@@ -14,5 +14,5 @@ export function setLocalLightModeSettings(val) {
 
 export function getLocalLightModeSettings() {
   const currentMode = localStorage.getItem("id-light-mode");
-  return currentMode === "true" ?? false;
+  return currentMode === null ? null : currentMode === "true";
 }
