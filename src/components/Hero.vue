@@ -23,7 +23,7 @@
           size="large"
           color="primary"
           variant="flat"
-          class="strong-shadow"
+          class="strong-shadow strong-border"
           >Book Free Consultation</v-btn
         >
       </div>

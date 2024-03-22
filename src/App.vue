@@ -55,6 +55,10 @@ export default {
 .strong-shadow {
   box-shadow: 5px 5px;
 }
+
+.strong-border {
+  border: 2px solid;
+}
 #app {
   // background-color: black;
   // color: white;

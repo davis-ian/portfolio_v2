@@ -33,7 +33,7 @@
           <v-btn
             color="primary"
             variant="flat"
-            class="strong-shadow"
+            class="strong-shadow strong-border"
             @click="ctaClick"
             >Let's Talk</v-btn
           >
