@@ -9,32 +9,11 @@
           density="compact"
           hide-details
         ></v-switch> -->
-        <div>
-          <v-btn variant="flat" id="theme-fab" icon>
-            <font-awesome-icon icon="fa-solid fa-brush"></font-awesome-icon>
-          </v-btn>
-          <v-speed-dial
-            scroll-strategy="close"
-            attach="#theme-fab"
-            activator="parent"
-            location="bottom center"
-            transition="slide-y-transition"
-          >
-            <v-btn key="1" icon>
-              <v-avatar
-                style="border: 2px solid black"
-                :color="$vuetify.theme.themes.dark.colors.background"
-                @click="lightTheme = false"
-              ></v-avatar>
-            </v-btn>
-            <v-btn @click="lightTheme = true" key="2" icon>
-              <v-avatar
-                style="border: 2px solid black"
-                :color="$vuetify.theme.themes.light.colors.background"
-              ></v-avatar>
-            </v-btn>
-          </v-speed-dial>
-        </div>
+
+        <theme-speed-dial
+          @light-theme="(val) => (lightTheme = val)"
+          class="theme-speed-dial"
+        ></theme-speed-dial>
 
         <!-- START: Mobile Nav -->
         <div class="d-flex d-sm-none">
@@ -72,6 +51,7 @@ import {
   getLocalLightModeSettings,
   setLocalLightModeSettings,
 } from "@/utlities/utils";
+import ThemeSpeedDial from "@/components/ui/ThemeSpeedDial.vue";
 import { useTheme } from "vuetify";
 export default {
   data() {
@@ -85,6 +65,9 @@ export default {
       type: Array,
       required: false,
     },
+  },
+  components: {
+    ThemeSpeedDial,
   },
   watch: {
     lightTheme(newVal) {

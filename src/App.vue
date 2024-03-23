@@ -146,7 +146,7 @@ p {
 }
 
 .button-shadow {
-  border: 2px solid #181818;
+  border: 2px solid rgb(var(--v-theme-font));
   box-shadow: 3px 3px rgb(var(--v-theme-font));
   transition: 0.3s;
 }

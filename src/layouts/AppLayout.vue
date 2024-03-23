@@ -6,6 +6,7 @@
       @cta-click="openEmail"
       class="nav bg-background"
       :nav-items="navItems"
+      ref="navBar"
     ></nav-bar>
 
     <v-navigation-drawer
@@ -69,6 +70,9 @@ export default {
   },
   methods: {
     openEmail,
+    updateLightTheme(val) {
+      this.$refs.navBar.lightTheme = val;
+    },
     toggleDrawer() {
       this.drawer = !this.drawer;
     },
@@ -114,7 +118,12 @@ export default {
   border-bottom: 2px solid;
   //background-color: white;
 }
-
+.theme-speed-dial {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+}
 .glass-blur {
   // backdrop-filter: blur(10px);
   // background-color: rgba(0, 0, 0, 0.4);
