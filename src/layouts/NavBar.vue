@@ -14,6 +14,7 @@
             <font-awesome-icon icon="fa-solid fa-brush"></font-awesome-icon>
           </v-btn>
           <v-speed-dial
+            scroll-strategy="close"
             attach="#theme-fab"
             activator="parent"
             location="bottom center"
@@ -22,14 +23,14 @@
             <v-btn key="1" icon>
               <v-avatar
                 style="border: 2px solid black"
-                color="black"
+                :color="$vuetify.theme.themes.dark.colors.background"
                 @click="lightTheme = false"
               ></v-avatar>
             </v-btn>
             <v-btn @click="lightTheme = true" key="2" icon>
               <v-avatar
                 style="border: 2px solid black"
-                color="white"
+                :color="$vuetify.theme.themes.light.colors.background"
               ></v-avatar>
             </v-btn>
           </v-speed-dial>
