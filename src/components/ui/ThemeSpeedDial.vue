@@ -2,7 +2,7 @@
   <div>
     <div class="d-flex">
       <div>
-        <v-btn variant="flat" id="theme-fab" icon>
+        <v-btn variant="text" id="theme-fab" icon>
           <font-awesome-icon icon="fa-solid fa-brush"></font-awesome-icon>
         </v-btn>
         <v-speed-dial
