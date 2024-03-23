@@ -166,4 +166,17 @@ p {
 //   src: local("BluuNext"),
 //     url(./assets/fonts/BluuNext-Bold.otf) format("opentype");
 // }
+
+@font-face {
+  font-family: "Sofia Sans";
+  src: local("Sofia Sans"),
+    url(./assets/fonts/SofiaSans-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  src: local("Sofia Sans Condensed"),
+    url(./assets/fonts/SofiaSansExtraCondensed-VariableFont_wght.ttf)
+      format("truetype");
+}
 </style>
