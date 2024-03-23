@@ -7,12 +7,6 @@
       Full Stack Developer
     </h1>
     <div>
-      <!-- <p>I build clean modern websites that embody the essence of your brand</p> -->
-
-      <!-- <p class="hero-container-subtitle text-uppercase mt-4">
-        Creative Developer Specializing in <br />
-        <strong> Full Stack Web Development</strong>
-      </p> -->
       <p class="hero-container-subtitle">
         I build clean and modern websites that focus on <strong>UX</strong> and
         <strong>performance</strong>.
@@ -31,12 +25,10 @@
   </div>
 </template>
 <script>
-import blobSvg from "@/assets/images/blob-svg1.svg";
 import { scrollToAppTop, openEmail } from "@/utlities/utils";
 export default {
   data() {
     return {
-      blobSvg,
       email: import.meta.env.VITE_EMAIL,
     };
   },
