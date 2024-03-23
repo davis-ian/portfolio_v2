@@ -4,7 +4,7 @@
       <hero />
     </div>
 
-    <Vue3Marquee class="strong-border" pause-on-hover clone :duration="3">
+    <Vue3Marquee class="marque-container" clone :duration="3">
       <div class="d-flex align-center">
         <h4 class="mx-8 text-uppercase">Scroll</h4>
         <font-awesome-icon
@@ -83,6 +83,11 @@ export default defineComponent({
 }
 
 .strong-divider {
+  border-bottom: 2px solid;
+}
+
+.marque-container {
+  border-top: 2px solid;
   border-bottom: 2px solid;
 }
 </style>

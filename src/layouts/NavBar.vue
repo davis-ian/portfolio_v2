@@ -1,16 +1,39 @@
 <template>
   <div>
     <nav class="d-flex justify-space-between align-center pa-3 px-5">
-      <h5 class="pointer text-uppercase" @click="$router.push('/')">
-        Ian Davis
-      </h5>
+      <h5 class="pointer text-uppercase" @click="handleLogoClick">Ian Davis</h5>
 
       <div class="d-flex" style="gap: 12px">
-        <v-switch
+        <!-- <v-switch
           v-model="lightTheme"
           density="compact"
           hide-details
-        ></v-switch>
+        ></v-switch> -->
+        <div>
+          <v-btn variant="flat" id="theme-fab" icon>
+            <font-awesome-icon icon="fa-solid fa-brush"></font-awesome-icon>
+          </v-btn>
+          <v-speed-dial
+            attach="#theme-fab"
+            activator="parent"
+            location="bottom center"
+            transition="slide-y-transition"
+          >
+            <v-btn key="1" icon>
+              <v-avatar
+                style="border: 2px solid black"
+                color="black"
+                @click="lightTheme = false"
+              ></v-avatar>
+            </v-btn>
+            <v-btn @click="lightTheme = true" key="2" icon>
+              <v-avatar
+                style="border: 2px solid black"
+                color="white"
+              ></v-avatar>
+            </v-btn>
+          </v-speed-dial>
+        </div>
 
         <!-- START: Mobile Nav -->
         <div class="d-flex d-sm-none">
@@ -88,6 +111,15 @@ export default {
       const metaThemeColor = document.querySelector("meta[name=theme-color]");
       if (metaThemeColor) {
         metaThemeColor.setAttribute("content", bgColor);
+      }
+    },
+    handleLogoClick() {
+      console.log(this.$router.currentRoute.value.name, "router");
+
+      if (this.$router.currentRoute.value.name === "Home") {
+        this.$emit("nav-click", this.navItems[0]);
+      } else {
+        $router.push("/");
       }
     },
   },

@@ -33,6 +33,7 @@ import {
   faArrowDown,
   faArrowLeft,
   faArrowRight,
+  faBrush,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -43,6 +44,7 @@ import {
 
 /* add icons to the library */
 library.add(
+  faBrush,
   faPython,
   faVuejs,
   faGithub,

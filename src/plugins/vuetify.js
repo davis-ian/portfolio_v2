@@ -8,8 +8,10 @@
 import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";
 
-// Composables
+// Composables7uhjn b
 import { createVuetify } from "vuetify";
+import { VSpeedDial } from "vuetify/labs/VSpeedDial";
+import { VFab } from "vuetify/labs/VFab";
 
 // Detect user's preferred scheme
 const userPrefersDark =
@@ -18,6 +20,10 @@ const userPrefersDark =
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
+  components: {
+    VSpeedDial,
+    VFab,
+  },
   theme: {
     defaultTheme: "light",
     themes: {

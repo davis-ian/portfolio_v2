@@ -3,9 +3,9 @@
     <h3 class="text-lowercase">Selected Works</h3>
     <div class="flex-grow-1 d-flex flex-column justify-center">
       <v-row>
-        <v-col cols="12" v-for="project in projects">
+        <v-col cols="12" sm="4" v-for="project in projects">
           <div class="mt-6">
-            <div class="project-image-wrapper pa-5 rounded">
+            <div class="project-image-wrapper button-shadow pa-5 rounded">
               <v-img
                 @click="openTab(project.link)"
                 v-if="project.image"
@@ -78,8 +78,6 @@ export default {
         for (let i = 0; i < this.projects.length; i++) {
           const project = this.projects[i];
           const response = await fetch(project.link, { mode: "no-cors" });
-
-          // console.log(`${project.label} response: `, response);
         }
       } catch (error) {
         console.log("error pinging project urls", error);
@@ -104,8 +102,8 @@ export default {
 
 .project-image-wrapper {
   max-width: 500px;
-  box-shadow: 5px 5px 0;
-  border: 2px solid;
+  // box-shadow: 5px 5px 0;
+  // border: 2px solid;
   cursor: pointer;
 }
 </style>

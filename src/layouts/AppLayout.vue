@@ -11,12 +11,12 @@
     <v-navigation-drawer
       class="bg-background"
       style="height: 100%; width: 100%"
-      v-model="drawer"
+      v-model="showMenu"
       touchless
       temporary
     >
       <div class="d-flex justify-end pa-3">
-        <v-btn @click="drawer = !drawer" icon variant="text">
+        <v-btn @click="toggleDrawer" icon variant="text">
           <font-awesome-icon icon="fa-solid fa-xmark"></font-awesome-icon>
         </v-btn>
       </div>
@@ -49,6 +49,7 @@ export default {
   data() {
     return {
       drawer: false,
+      showDial: true,
       navItems: [
         { label: "Home", route: "home" },
         { label: "Work", route: "projects" },
@@ -58,11 +59,20 @@ export default {
       ],
     };
   },
+  computed: {
+    showMenu() {
+      return this.drawer && this.$vuetify.display.xs;
+    },
+  },
+  components: {
+    NavBar,
+  },
   methods: {
     openEmail,
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    },
     handleMenuNav(navItem) {
-      console.log(navItem, "nav item clicked");
-
       const el = document.getElementById(navItem.route);
       this.drawer = false;
       if (!el) return;
@@ -76,9 +86,6 @@ export default {
         behavior: "smooth",
       });
     },
-  },
-  components: {
-    NavBar,
   },
   mounted() {},
 };

@@ -43,7 +43,6 @@ export default {
       const metaThemeColor = document.querySelector("meta[name=theme-color]");
       if (metaThemeColor) {
         metaThemeColor.setAttribute("content", bgColor);
-        console.log(metaThemeColor, "meta found");
       }
     },
   },
