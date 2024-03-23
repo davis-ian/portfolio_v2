@@ -59,7 +59,7 @@ export default {
 
       setTimeout(() => {
         this.updatingTheme = false;
-      }, 150);
+      }, 250);
     },
   },
 };
