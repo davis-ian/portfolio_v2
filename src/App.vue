@@ -51,26 +51,18 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  // background-color: black;
-  // color: white;
-}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  // font-family: "YoungSerif", serif;
-  // font-family: "Inter", sans-serif;
-  // font-family: "GT America Condensed", sans-serif;
-  // font-family: "DM Sans", sans-serif;
   font-weight: 700 !important;
-  // font-family: "FiraSans", sans-serif;
   font-family: "Sofia Sans Extra Condensed", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 /* Global styles for headings to match Vuetify's Material Design typography */
 h1 {
   font-size: 6rem; /* 96px */
@@ -119,7 +111,6 @@ html {
 }
 body,
 .v-application {
-  // font-family: "DM Sans", sans-serif;
   font-family: "Sofia Sans", sans-serif;
   // font-family: "GT America", sans-serif;
   font-optical-sizing: auto;
@@ -171,36 +162,8 @@ p {
 }
 
 // @font-face {
-//   font-family: "TuskerGrotesk";
-//   src: local("TuskerGrotesk"),
-//     url(./assets/fonts/TuskerGrotesk-1500Medium.otf) format("opentype");
-// }
-
-// @font-face {
 //   font-family: "BluuNext";
 //   src: local("BluuNext"),
 //     url(./assets/fonts/BluuNext-Bold.otf) format("opentype");
 // }
-// @font-face {
-//   font-family: "YoungSerif";
-//   src: local("YoungSerif"),
-//     url(./assets/fonts/YoungSerif-Regular.otf) format("opentype");
-// }
-// @font-face {
-//   font-family: "MigraBold";
-//   src: local("MigraBold"),
-//     url(./assets/fonts/Migra-Extrabold.otf) format("opentype");
-// }
-
-@font-face {
-  font-family: "GT America";
-  src: local("GT-America-Standard-Medium"),
-    url(./assets/fonts/GT-America-Standard-Medium.otf) format("opentype");
-}
-
-@font-face {
-  font-family: "GT America Condensed";
-  src: local("GT-America-Condensed-Bold"),
-    url(./assets/fonts/GT-America-Condensed-Bold.otf) format("opentype");
-}
 </style>
