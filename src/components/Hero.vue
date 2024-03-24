@@ -18,6 +18,7 @@
           color="primary"
           variant="flat"
           class="button-shadow"
+          aria-label="Free Consultation Button"
           >Book Free Consultation</v-btn
         >
       </div>

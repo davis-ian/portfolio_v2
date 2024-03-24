@@ -13,6 +13,7 @@
                 aspect-ratio="1"
                 :src="project.image"
                 :lazy-src="project.image"
+                alt="Project Image"
               ></v-img>
             </div>
 
@@ -31,12 +32,14 @@
                 color="primary"
                 variant="flat"
                 class="button-shadow"
+                aria-label="Website Demo Button"
                 >Website</v-btn
               >
               <v-btn
                 class="button-shadow"
                 color="white"
                 @click="openTab(project.gh)"
+                aria-label="Github Link Button"
                 >GitHub</v-btn
               >
             </div>
@@ -46,9 +49,8 @@
     </div>
     <div class="mt-12">
       <p>Like what you see? Let's talk:</p>
-      <a @click="openEmail" class="text-decoration-underline"
-        ><h5>{{ email }}</h5></a
-      >
+      <p @click="openEmail" class="text-decoration-underline pointer"
+        ><h5>{{ email }}</h5></p>
     </div>
   </div>
 </template>

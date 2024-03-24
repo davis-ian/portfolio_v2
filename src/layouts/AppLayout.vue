@@ -17,7 +17,12 @@
       temporary
     >
       <div class="d-flex justify-end pa-3">
-        <v-btn @click="toggleDrawer" icon variant="text">
+        <v-btn
+          aria-label="Nav Drawer Button"
+          @click="toggleDrawer"
+          icon
+          variant="text"
+        >
           <font-awesome-icon icon="fa-solid fa-xmark"></font-awesome-icon>
         </v-btn>
       </div>

@@ -18,6 +18,7 @@
         variant="flat"
         color="primary"
         class="button-shadow"
+        aria-label="Contact Button"
         >Contact Me</v-btn
       >
     </div>

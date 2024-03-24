@@ -17,7 +17,12 @@
 
         <!-- START: Mobile Nav -->
         <div class="d-flex d-sm-none">
-          <v-btn @click="$emit('toggle-drawer')" icon variant="text">
+          <v-btn
+            @click="$emit('toggle-drawer')"
+            icon
+            variant="text"
+            aria-label="Nav Drawer Button"
+          >
             <font-awesome-icon icon="fa-solid fa-bars"></font-awesome-icon>
           </v-btn>
         </div>
@@ -30,6 +35,7 @@
             variant="text"
             @click="$emit('nav-click', item)"
             v-for="item in navItems"
+            :aria-label="`${item.label} Nav Button`"
             >{{ item.label }}</v-btn
           >
 

@@ -2,7 +2,12 @@
   <div>
     <div class="d-flex">
       <div>
-        <v-btn variant="text" id="theme-fab" icon>
+        <v-btn
+          variant="text"
+          id="theme-fab"
+          icon
+          aria-label="Theme Select Button"
+        >
           <font-awesome-icon icon="fa-solid fa-brush"></font-awesome-icon>
         </v-btn>
         <v-speed-dial
@@ -19,6 +24,7 @@
             key="1"
             icon
             @click="updateLightTheme(false)"
+            aria-label="Light Theme Button"
           >
             <v-avatar
               size="30"
@@ -33,6 +39,7 @@
             @click="updateLightTheme(true)"
             key="2"
             icon
+            aria-label="Dark Theme Button"
           >
             <v-avatar
               size="30"

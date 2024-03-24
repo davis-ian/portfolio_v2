@@ -9,6 +9,7 @@
           text
           v-bind="attrs"
           @click="button.callback"
+          aria-label="Snackbar Action Button"
         >
           {{ button.text }}
         </v-btn>

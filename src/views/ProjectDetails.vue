@@ -3,7 +3,13 @@
     <div class="d-flex justify-space-between align-center">
       <h3 v-if="selectedProject">{{ selectedProject.label }}</h3>
       <v-spacer v-else></v-spacer>
-      <v-btn variant="flat" color="black" size="small" @click="$router.back()">
+      <v-btn
+        variant="flat"
+        color="black"
+        size="small"
+        aria-label="Back Button"
+        @click="$router.back()"
+      >
         <font-awesome-icon
           icon="fa-solid fa-arrow-left"
           class="mr-2"
@@ -17,8 +23,10 @@
         <p v-for="i in 3">To Do</p>
       </div>
       <div class="d-flex mt-3" style="gap: 12px">
-        <v-btn color="black" variant="flat">Website</v-btn>
-        <v-btn variant="outlined">Github</v-btn>
+        <v-btn color="black" variant="flat" aria-label="Website Button"
+          >Website</v-btn
+        >
+        <v-btn variant="outlined" aria-label="Github Button">Github</v-btn>
       </div>
 
       <div class="mt-3" style="border: 2px solid red">

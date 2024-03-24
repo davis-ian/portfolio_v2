@@ -7,6 +7,7 @@
       class="mt-6"
       variant="flat"
       color="black"
+      aria-label="Home Navigation Button"
       >Home Page</v-btn
     >
   </div>
