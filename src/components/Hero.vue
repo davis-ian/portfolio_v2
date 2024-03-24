@@ -49,7 +49,6 @@ export default {
 
   &-title {
     font-size: clamp(10rem, 20vw, 20rem);
-    min-height: 60vh;
   }
 
   &-subtitle {
