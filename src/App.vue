@@ -171,6 +171,7 @@ p {
   font-family: "Sofia Sans";
   src: local("Sofia Sans"),
     url(./assets/fonts/SofiaSans-VariableFont_wght.ttf) format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -178,5 +179,6 @@ p {
   src: local("Sofia Sans Condensed"),
     url(./assets/fonts/SofiaSansExtraCondensed-VariableFont_wght.ttf)
       format("truetype");
+  font-display: swap;
 }
 </style>
