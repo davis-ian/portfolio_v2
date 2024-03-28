@@ -167,7 +167,8 @@ a:hover {
   color: rgb(var(--v-theme-font)) !important;
 }
 a:visited {
-  color: #207361;
+  // color: #207361;
+  color: rgb(var(--v-theme-linkVisited));
 }
 .button-shadow {
   border: 2px solid rgb(var(--v-theme-font));
