@@ -164,7 +164,7 @@ a {
   transition: 0.2s;
 }
 a:hover {
-  color: black !important;
+  color: rgb(var(--v-theme-font)) !important;
 }
 a:visited {
   color: #207361;
