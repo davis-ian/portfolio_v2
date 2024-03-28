@@ -21,7 +21,6 @@ import AppLayout from "@/layouts/AppLayout.vue";
 import Snackbar from "@/components/ui/Snackbar.vue";
 import { useSnackbarStore } from "./store/snackbar";
 import { useTheme } from "vuetify";
-import { onMounted } from "vue";
 
 export default {
   data() {
@@ -36,6 +35,7 @@ export default {
   },
   mounted() {
     this.updateThemeColor();
+    // this.adjustHeadingFontWeightForSafari();
   },
   methods: {
     updateThemeColor() {
@@ -45,19 +45,42 @@ export default {
         metaThemeColor.setAttribute("content", bgColor);
       }
     },
+    adjustHeadingFontWeightForSafari() {
+      // Regex to detect Safari browser. This checks the user agent string
+      // to identify if the browser is Safari by excluding Chrome and Android browsers,
+      // which also use "Safari" in their user agent strings.
+      const isSafari = /^((?!chrome|android).)*safari/i.test(
+        navigator.userAgent
+      );
+
+      // If the browser is Safari, adjust the CSS variable for heading font weight.
+      if (isSafari) {
+        // Setting a CSS variable '--heading-font-weight' on the document root.
+        // This variable can then be used within CSS to conditionally apply styles
+        // for Safari browsers.
+        document.documentElement.style.setProperty(
+          "--heading-font-weight",
+          "590"
+        );
+      }
+    },
   },
   components: { Snackbar, AppLayout },
 };
 </script>
 
 <style lang="scss">
+:root {
+  --heading-font-weight: 700;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 700 !important;
+  font-weight: var(--heading-font-weight) !important;
   font-family: "Sofia Sans Extra Condensed", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -120,6 +143,7 @@ body,
 
   -webkit-font-smoothing: antialiased; /* For Chrome and Safari */
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 p {
@@ -136,6 +160,15 @@ p {
   color: rgb(var(--v-theme-font));
 }
 
+a {
+  transition: 0.2s;
+}
+a:hover {
+  color: black !important;
+}
+a:visited {
+  color: #207361;
+}
 .button-shadow {
   border: 2px solid rgb(var(--v-theme-font));
   box-shadow: 3px 3px rgb(var(--v-theme-font));
@@ -172,6 +205,7 @@ p {
   src: local("Sofia Sans"),
     url(./assets/fonts/SofiaSans-VariableFont_wght.ttf) format("truetype");
   font-display: swap;
+  font-weight: 100 900;
 }
 
 @font-face {
@@ -180,5 +214,6 @@ p {
     url(./assets/fonts/SofiaSansExtraCondensed-VariableFont_wght.ttf)
       format("truetype");
   font-display: swap;
+  font-weight: 100 900;
 }
 </style>

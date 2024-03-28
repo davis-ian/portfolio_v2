@@ -4,7 +4,11 @@
     <p class="my-3">
       I'm a full-stack developer. I build clean and modern websites with a focus
       on UX and performance. I'm currently working with the incredible team @
-      <strong>MemoryShare</strong>.
+      <strong
+        ><a href="https://www.memoryshare.com/previously-midwest-streams"
+          >MemoryShare</a
+        ></strong
+      >.
     </p>
   </div>
 </template>
@@ -15,7 +19,4 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.about {
-}
-</style>
+<style lang="scss"></style>
