@@ -66,7 +66,7 @@ export const projects = [
     // image: "https://iandavs.com/lifttrackr_pic.png",
     image: clipperMockup,
     inProgress: true,
-    link: "https://thumbnail.inadavis.dev",
+    link: "https://thumbnail.iandavis.dev",
     gh: "https://github.com/davis-ian/ffmpeg_wa",
     desc: "Generate thumbnails from video in the browser",
     techStack: [
