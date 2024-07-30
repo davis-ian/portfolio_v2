@@ -32,6 +32,7 @@ export const themes = [
 import upnextMockup from "@/assets/images/upnext-mockup.png";
 import minigamesMockup from "@/assets/images/minigames-mockup.png";
 import liftMockup from "@/assets/images/lift-mockup.png";
+import clipperMockup from "@/assets/images/clipper-mockup-pixeltrue.png";
 
 export const projects = [
   {
@@ -55,6 +56,19 @@ export const projects = [
     link: "https://minigames.iandavis.dev",
     gh: "https://github.com/davis-ian/minigame",
     desc: "A place to host minigames I've created",
+    techStack: [
+      { label: "Python", color: "#f7cc42" },
+      { label: "Django", color: "#0c4b33" },
+    ],
+  },
+  {
+    label: "thumbnail clipper",
+    // image: "https://iandavs.com/lifttrackr_pic.png",
+    image: clipperMockup,
+    inProgress: true,
+    link: "https://thumbnail.inadavis.dev",
+    gh: "https://github.com/davis-ian/ffmpeg_wa",
+    desc: "Generate thumbnails from video in the browser",
     techStack: [
       { label: "Python", color: "#f7cc42" },
       { label: "Django", color: "#0c4b33" },

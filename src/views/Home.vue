@@ -4,7 +4,7 @@
       <hero />
     </div>
 
-    <Vue3Marquee class="marque-container" clone :duration="3">
+    <!-- <Vue3Marquee class="marque-container" clone :duration="3">
       <div class="d-flex align-center">
         <h4 class="mx-8 text-uppercase">Scroll</h4>
         <font-awesome-icon
@@ -12,7 +12,7 @@
           icon="fa-solid fa-arrow-down"
         ></font-awesome-icon>
       </div>
-    </Vue3Marquee>
+    </Vue3Marquee> -->
 
     <div id="projects" class="pa-5">
       <projects />

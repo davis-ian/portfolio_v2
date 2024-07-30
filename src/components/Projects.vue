@@ -3,8 +3,10 @@
     <h3 class="text-lowercase">Selected Works</h3>
     <div class="flex-grow-1 d-flex flex-column justify-center">
       <v-row>
-        <v-col cols="12" sm="4" v-for="project in projects">
-          <div class="mt-6">
+        <v-col cols="12" sm="4" v-for="project, index in projects" :key="index" class="d-flex" >
+
+          <div class="mt-6 flex-grow-1 d-flex flex-column justify-space-between ">
+            <div >
             <div class="project-image-wrapper button-shadow pa-5 rounded">
               <v-img
                 @click="openTab(project.link)"
@@ -25,6 +27,7 @@
             <p class="mt-1">
               {{ project.desc }}
             </p>
+            </div>
 
             <div class="d-flex mt-2" style="gap: 12px">
               <v-btn
@@ -36,6 +39,7 @@
                 >Website</v-btn
               >
               <v-btn
+                v-if="project.gh"
                 class="button-shadow"
                 color="white"
                 @click="openTab(project.gh)"
@@ -44,6 +48,7 @@
               >
             </div>
           </div>
+
         </v-col>
       </v-row>
     </div>
