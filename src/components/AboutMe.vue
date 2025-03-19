@@ -5,7 +5,7 @@
       I'm a full-stack developer. I build clean and modern websites with a focus
       on UX and performance. I'm currently working with the incredible team @
       <strong
-        ><a href="https://www.memoryshare.com/previously-midwest-streams"
+        ><a href="https://www.memoryshare.com/" target="_blank"
           >MemoryShare</a
         ></strong
       >.
