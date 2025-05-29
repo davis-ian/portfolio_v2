@@ -158,7 +158,7 @@ export default {
   cursor: pointer;
 }
 .featured-container {
-  max-width: 650px;
+  max-width: 850px;
 
   .video-player {
     max-width: 100%;
